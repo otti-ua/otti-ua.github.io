@@ -10,9 +10,81 @@
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
     span.s1 {text-decoration: underline ; font-kerning: none}
   </style>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+  background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
+}
+
+.container,
+.first,
+.second {
+  position: absolute;
+}
+
+.container {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 170px;
+  height: 50px;
+  transition: all 0.3s ease; 
+}
+
+.wrap {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #FFF;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.first,
+.second {
+  width: 100%;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.2s ease-in-out;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 2px; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.second {
+  opacity: 0;
+}
+
+.container:hover {
+   width: 280px;
+  
+  .wrap {
+  padding-bottom: 17px;
+  }
+  .first {
+    transform: translateY(-8px);
+    padding-top: 5px;
+  }
+  .second {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+  </style>
 </head>
 <body>
-<p class="p1"><span class="s1">
-  <a href="itms-services://?action=download-manifest&amp;url=https://dl.dropboxusercontent.com/s/1gzwlz4wl6u625b/manifest.plist">Install JTI</a></span></p>
+<div class="container">
+  <div class="wrap">
+    <a href="itms-services://?action=download-manifest&amp;url=https://dl.dropboxusercontent.com/s/1gzwlz4wl6u625b/manifest.plist">
+    <div class="first">JTI ProAssist</div>
+      <div class="second">For Apple</div>
+    </a>
+  </div>
+</div>
 </body>
 </html>
